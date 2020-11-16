@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Johnny Xtreme</string>
+    <string name="johny_xtreme">Johnny Xtreme</string>
+    <string name="english">English</string>
+    <string name="japanese">日本語</string>
+    <string name="new_comics">新刊コミック</string>
+    <string name="view_all">すべて見る</string>
+    <string name="sign_in">サインイン</string>
+    <string name="sign_up">新規登録</string>
+    <string name="send_mail">Send</string>
+    <string name="forgot_password_title">Forgot Password</string>
+    <string name="email">Eメール</string>
+    <string name="password">パスワード</string>
+    <string name="forgot_password">パスワードをお忘れですか？</string>
+    <string name="dont_have_an_account">アカウントをお持ちでないですか？</string>
+    <string name="user">ユーザー</string>
+    <string name="existing_user">既にご登録済みですか?</string>
+    <string name="my_profile">プロフィール</string>
+    <string name="restore_purchases">購入の復元</string>
+    <string name="settings">設定</string>
+    <string name="creator_profile">クリエータープロフィール</string>
+    <string name="cancel">キャンセル</string>
+    <string name="recent_searches">検索履歴</string>
+    <string name="reviews">レビュー</string>
+    <string name="review_setting">Review</string>
+    <string name="all_comics">すべてのコミック</string>
+    <string name="edit_profile">プロフィールを編集する</string>
+    <string name="purchases">購入品</string>
+    <string name="sign_out">サインアウト</string>
+    <string name="about">について</string>
+    <string name="rate_this_app">アプリを評価</string>
+    <string name="send_us_feedback">フィードバックを送信</string>
+    <string name="terms_of_use">ご利用規約</string>
+    <string name="privacy_policy">プライバシーポリシー</string>
+    <string name="submit">参加する</string>
+
+    <string name="read">Read now</string>
+    <string name="read_more">プレビュー</string>
+    <string name="empty_email">有効なメールアドレスを入力してください。</string>
+    <string name="empty_user">有効なユーザー名を入力してください。</string>
+    <string name="enter_valid_email">有効なメールアドレスを入力してください。</string>
+    <string name="empty_password">パスワードを入力してください。</string>
+    <string name="enter_valid_password">パスワードを入力してください。</string>
+    <string name="profile_update">Profile updated successfully</string>
+    <string name="select_picture">Select picture</string>
+    <string name="buy_comic">今すぐ購入して続きを楽しもう。</string>
+    <string name="back">Back</string>
+    <string name="buy">Buy Now</string>
+    <string name="post_review">Post Review</string>
+    <string name="ok">Ok</string>
+    <string name="login_now">Login now</string>
+    <string name="login_message">You can purchase comic after logged in</string>
+    <string name="verify_email_message">メールを確認し、メールアドレスを確認してからログインしてください</string>
+
+    <string name="pon_chan">Pon-chan</string>
+    <string name="mushy">Mushy</string>
+
+    <string name="pon_chan_desc">日本在住のフリーライター。アフリカでボランティアを通し子供や若者と携わってきた。\n\n執筆活動以外には、採点や、地元大学で教壇に上がっている。\n\n彼女の最新作、ジョニーエクストリームは誠実で勇敢な優しく楽しくアクション満載のキャラクターたちのストーリー。登場人物たちはスポーツ愛で人々を１つにしていく。\n\n詳細、およびJohnny Xtreme商品のご購入は、https://xtremeteez.com/ まで</string>
+    <string name="mushy_desc">日本在住のフリーライター兼教師。子供や若者に教鞭を執る。\n\n幼少期はコミック本に熱狂して過ごす。マーベル、DC、アーチー、全てを読破した。\n\n彼の作品は努力と敬意を謳っている。長年にわたり教育者として彼はこの価値観を生徒たちに伝えてきた。\n\n執筆活動以外には、読書やエクササイズを楽しんでいる。\n\n詳細、およびJohnny Xtreme商品のご購入は、https://xtremeteez.com/ まで.</string>
+    <string name="email_already_in_use">このメールアドレスは既に別のアカウントで使用されています。</string>
+    <string name="username_already_in_use">このユーザーネームは既に別のアカウントで使用されています。</string>
+    <string name="sent_verification_email">ご購入の前にアカウント検証のためのE-Mailをお送りします。受信ボックスにメールが届かない場合は、迷惑メールのフォルダをご確認下さい</string>
+</resources>

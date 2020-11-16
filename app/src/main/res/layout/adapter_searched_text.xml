@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="11dp"
+    android:layout_marginBottom="11dp"
+    android:orientation="horizontal">
+
+    <ImageView
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:src="@drawable/ic_round_search" />
+
+    <TextView
+        android:id="@+id/tv_searched_text"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginStart="24dp"
+        android:fontFamily="@font/thai_sans_neue_regular"
+        android:textColor="@color/colorWhite"
+        android:text="Keyword"
+        android:textSize="22sp" />
+
+    <TextView
+        android:id="@+id/tv_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginStart="8dp"
+        android:text="14:56, April 3, 2019"
+        android:fontFamily="@font/thai_sans_neue_regular"
+        android:textColor="@color/colorWhite"
+        android:textSize="17sp" />
+
+</LinearLayout>

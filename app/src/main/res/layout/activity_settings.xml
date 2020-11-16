@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f7f7f7"
+    android:orientation="vertical"
+    tools:context=".activities.SettingsActivity">
+
+    <ImageView
+        android:id="@+id/iv_back"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="11dp"
+        android:padding="8dp"
+        android:src="@drawable/ic_action_back" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="35dp"
+                android:fontFamily="@font/thai_sans_neue_bold"
+                android:text="@string/user"
+                android:textAllCaps="true"
+                android:textColor="@color/colorBlack"
+                android:textSize="22sp" />
+
+            <LinearLayout
+                android:id="@+id/ll_sign_out"
+                android:layout_width="match_parent"
+                android:layout_height="71dp"
+                android:layout_marginTop="16dp"
+                android:background="@color/colorWhite"
+                android:gravity="center_vertical"
+                android:paddingLeft="37dp">
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/ic_logout" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="35dp"
+                    android:fontFamily="@font/thai_sans_neue_regular"
+                    android:text="@string/sign_out"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="22sp" />
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="35dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/thai_sans_neue_bold"
+                android:text="@string/about"
+                android:textAllCaps="true"
+                android:textColor="@color/colorBlack"
+                android:textSize="22sp" />
+
+            <LinearLayout
+                android:id="@+id/ll_rate_app"
+                android:layout_width="match_parent"
+                android:layout_height="71dp"
+                android:layout_marginTop="20dp"
+                android:background="@color/colorWhite"
+                android:gravity="center_vertical"
+                android:paddingLeft="37dp">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    app:cardBackgroundColor="@color/colorBlack"
+                    app:cardCornerRadius="15dp">
+
+                    <ImageView
+                        android:layout_width="18dp"
+                        android:layout_height="18dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/ic_rate" />
+
+                </androidx.cardview.widget.CardView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="35dp"
+                    android:fontFamily="@font/thai_sans_neue_regular"
+                    android:text="@string/rate_this_app"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="22sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_review"
+                android:layout_width="match_parent"
+                android:layout_height="71dp"
+                android:background="@color/colorWhite"
+                android:gravity="center_vertical"
+                android:paddingLeft="37dp">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    app:cardBackgroundColor="@color/colorBlack"
+                    app:cardCornerRadius="15dp">
+
+                    <ImageView
+                        android:layout_width="18dp"
+                        android:layout_height="18dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="2dp"
+                        android:src="@drawable/ic_review" />
+
+                </androidx.cardview.widget.CardView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="35dp"
+                    android:fontFamily="@font/thai_sans_neue_regular"
+                    android:text="@string/review_setting"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="22sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_terms"
+                android:layout_width="match_parent"
+                android:layout_height="71dp"
+                android:background="@color/colorWhite"
+                android:gravity="center_vertical"
+                android:paddingLeft="37dp">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    app:cardBackgroundColor="@color/colorBlack"
+                    app:cardCornerRadius="15dp">
+
+                    <ImageView
+                        android:layout_width="18dp"
+                        android:layout_height="18dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/ic_tearms" />
+
+                </androidx.cardview.widget.CardView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="35dp"
+                    android:fontFamily="@font/thai_sans_neue_regular"
+                    android:text="@string/terms_of_use"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="22sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_privacy"
+                android:layout_width="match_parent"
+                android:layout_height="71dp"
+                android:background="@color/colorWhite"
+                android:gravity="center_vertical"
+                android:paddingLeft="37dp">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    app:cardBackgroundColor="@color/colorBlack"
+                    app:cardCornerRadius="15dp">
+
+                    <ImageView
+                        android:layout_width="18dp"
+                        android:layout_height="18dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/insurance"
+                        android:tint="@color/colorWhite" />
+
+                </androidx.cardview.widget.CardView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="35dp"
+                    android:fontFamily="@font/thai_sans_neue_regular"
+                    android:text="@string/privacy_policy"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="22sp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

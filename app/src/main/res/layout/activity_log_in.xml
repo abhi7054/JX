@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    tools:context=".activities.LogInActivity">
+
+    <ImageView
+        android:id="@+id/iv_back"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_margin="24dp"
+        android:padding="8dp"
+        android:src="@drawable/ic_action_back" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="130dp"
+        android:layout_marginEnd="50dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="@font/myriadpro_bold"
+            android:text="@string/sign_in"
+            android:textAllCaps="true"
+            android:textColor="@color/colorBlack"
+            android:textSize="38sp" />
+
+        <EditText
+            android:id="@+id/et_email"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="50dp"
+            android:background="@drawable/laguange_button_shape"
+            android:inputType="textEmailAddress"
+            android:backgroundTint="#0F7B7B7B"
+            android:fontFamily="@font/thai_sans_neue_regular"
+            android:hint="@string/email"
+            android:paddingStart="24dp"
+            android:textColor="@color/colorBlack"
+            android:textColorHint="@color/colorBlack"
+            android:textSize="22sp" />
+
+        <EditText
+            android:id="@+id/et_password"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/laguange_button_shape"
+            android:backgroundTint="#0F7B7B7B"
+            android:fontFamily="@font/thai_sans_neue_regular"
+            android:hint="@string/password"
+            android:inputType="textPassword"
+            android:paddingStart="24dp"
+            android:textColor="@color/colorBlack"
+            android:textColorHint="@color/colorBlack"
+            android:textSize="22sp" />
+
+        <TextView
+            android:id="@+id/tv_forgot_password"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/thai_sans_neue_regular"
+            android:text="@string/forgot_password"
+            android:textColor="@color/colorBlack"
+            android:textSize="16sp"/>
+
+        <RelativeLayout
+            android:id="@+id/rl_sign_in"
+            android:layout_width="150dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="24dp"
+            android:background="@drawable/laguange_button_shape"
+            android:backgroundTint="@color/colorPrimary"
+            android:layout_gravity="center_horizontal">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/thai_sans_neue_bold"
+                android:text="@string/sign_in"
+                android:layout_centerInParent="true"
+                android:layout_centerHorizontal="true"
+                android:textAlignment="center"
+                android:textColor="@color/colorWhite"
+                android:textSize="16sp"/>
+
+        </RelativeLayout>
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:orientation="vertical"
+            android:layout_marginTop="15dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/thai_sans_neue_bold"
+                android:includeFontPadding="false"
+                android:text="@string/dont_have_an_account"
+                android:textColor="@color/colorBlack"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/tv_sign_up"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/thai_sans_neue_bold"
+                android:includeFontPadding="false"
+                android:text="@string/sign_up"
+                android:textAlignment="center"
+                android:textColor="@color/colorBlack"
+                android:textSize="18sp" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+</RelativeLayout>

@@ -1,0 +1,71 @@
+<resources>
+    <string name="app_name">Johnny Xtreme</string>
+    <string name="johny_xtreme">Johnny Xtreme</string>
+    <string name="english">English</string>
+    <string name="japanese">日本語</string>
+    <string name="new_comics">New Comics</string>
+    <string name="view_all">View All</string>
+    <string name="sign_in">Sign In</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="send_mail">Send</string>
+    <string name="forgot_password_title">Forgot Password</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="forgot_password">Forgot your Password?</string>
+    <string name="dont_have_an_account">Don\'t have an Account?</string>
+    <string name="user">User</string>
+    <string name="existing_user">Existing User?</string>
+    <string name="my_profile">My Profile</string>
+    <string name="restore_purchases">Restore Purchases</string>
+    <string name="settings">Settings</string>
+    <string name="creator_profile">Creator Profiles</string>
+    <string name="cancel">Cancel</string>
+    <string name="recent_searches">Recent Searches</string>
+    <string name="reviews">Reviews</string>
+    <string name="review_setting">Review</string>
+    <string name="all_comics">All Comics</string>
+    <string name="edit_profile">Edit Profile</string>
+    <string name="purchases">Purchases</string>
+    <string name="sign_out">Sign Out</string>
+    <string name="about">ABOUT</string>
+    <string name="rate_this_app">Rate This App</string>
+    <string name="send_us_feedback">Send Us Feedback</string>
+    <string name="terms_of_use">Terms of Use</string>
+    <string name="privacy_policy">Privacy Policy</string>
+    <string name="submit">Submit</string>
+
+    <string name="read">Read now</string>
+    <string name="read_more">Preview</string>
+    <string name="empty_email">Please enter email address</string>
+    <string name="empty_user">Please enter user name</string>
+    <string name="enter_valid_email">Please enter valid email address</string>
+    <string name="empty_password">Please enter password</string>
+    <string name="enter_valid_password">Password must be more than 6 characters</string>
+    <string name="profile_update">Profile updated successfully</string>
+    <string name="select_picture">Select picture</string>
+    <string name="buy_comic">Buy now to enjoy the rest of the story.</string>
+    <string name="back">Back</string>
+    <string name="buy">Buy</string>
+    <string name="post_review">Post Review</string>
+    <string name="ok">Ok</string>
+    <string name="login_now">Login now</string>
+    <string name="login_message">You can purchase comic after logged in</string>
+    <string name="verify_email_message">Check your mail and login after verify email address</string>
+
+    <string name="pon_chan">Pon-chan</string>
+    <string name="mushy">Mushy</string>
+
+    <string name="pon_chan_desc">Pon-chan is a freelance writer based in Japan. She has worked with children and young adults while volunteering in Africa.\n\n
+        When she\'s not writing, you can find her grading papers or teaching at a local university.\n\n
+        Her recently released comic, Johnny Xtreme, is based on sweet fun and action-packing characters who are loyal and fearless. The characters unite people through the love of sports.\n\n
+        For more information, and to get your Johnny Xtreme merchandise, please visit https://xtremeteez.com</string>
+    <string name="mushy_desc">Mushy is a freelance writer and teacher based in Japan. He teaches children and young adults.\n\n
+        In his childhood he was a comic book junkie. He read everything Marvel, DC, and Archie.\n\n
+        His writings advocate for hard work and respect. Over the years as an educator he has imparted these values to his students.\n\n
+        When he’s not writing, he enjoys reading and exercising.\n\n
+        For more information, and to get your Johnny Xtreme merchandise, please visit https://xtremeteez.com</string>
+    <string name="email_already_in_use">The email address is already in use by another account.</string>
+    <string name="username_already_in_use">This username is already in use by another account.</string>
+    <string name="sent_verification_email">You’ll be sent an email to verify your account before you can make any purchases. If it doesn’t reach your inbox, please check your junk/spam folder.</string>
+
+</resources>

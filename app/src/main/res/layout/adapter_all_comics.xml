@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="135dp"
+    android:layout_marginBottom="21dp"
+    android:orientation="horizontal">
+
+    <ImageView
+        android:id="@+id/iv_comic_image"
+        android:layout_width="105dp"
+        android:layout_height="135dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/item" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_comic_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/thai_sans_neue_extra_bold"
+            android:text="Where the Crawdads Sing"
+            android:textColor="@color/colorWhite"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tv_author"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/thai_sans_neue_regular"
+            android:text="by Delia Owens"
+            android:textColor="@color/colorWhite"
+            android:textSize="16sp" />
+
+        <LinearLayout
+            android:id="@+id/ll_star_container"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" />
+
+        <TextView
+            android:id="@+id/tv_review_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/thai_sans_neue_regular"
+            android:text="8,184 Reviews"
+            android:textColor="@color/colorWhite"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/tv_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/thai_sans_neue_regular"
+            android:text="Aug 14, 2018"
+            android:textColor="@color/colorWhite"
+            android:textSize="12sp" />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="0dp"
+            android:layout_weight="1"/>
+
+        <LinearLayout
+            android:id="@+id/rl_sign_up"
+            android:layout_width="wrap_content"
+            android:layout_height="28dp"
+            android:background="@drawable/laguange_button_shape"
+            android:backgroundTint="@color/colorPrimary"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingStart="16dp"
+            android:paddingEnd="24dp">
+
+            <ImageView
+                android:layout_width="13dp"
+                android:layout_height="13dp"
+                android:src="@drawable/ic_price" />
+
+            <TextView
+                android:id="@+id/tv_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="8dp"
+                android:fontFamily="@font/segoe_ui_bold"
+                android:text="$15.6"
+                android:textColor="@color/colorWhite"
+                android:textSize="10sp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

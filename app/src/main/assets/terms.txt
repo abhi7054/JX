@@ -1,0 +1,63 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2513
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica-Bold;\f1\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww12600\viewh7280\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\b\fs48 \cf0 Johnny Xtreme Comics License Agreement and Terms of Use
+\f1\b0 \
+\
+This Johnny Xtreme Comics License Agreement and Terms of Use (the "Agreement") is an agreement between you and Xtreme Teez, Inc. Please read this Johnny Xtreme Comics License Agreement and Terms of Use, Johnny Xtreme Comics Privacy Policy and other applicable rules, policies, and terms posted on Our Site or any Johnny Xtreme Comics Apps before using the Johnny Xtreme Comics App and Digital Content (each as defined below). In the event of a conflict between those terms and the terms of this Agreement, this Agreement will govern.\
+By downloading and/or using the Johnny Xtreme Comics App and/or any Digital Content, you agree to be bound by the terms of this Agreement, of the Johnny Xtreme Privacy Policy and the Johnny Xtreme Comics Terms & Conditions. If you do not accept these terms, then you may not download or use the Johnny Xtreme Comics App or any Digital Content. In addition, when using the Johnny Xtreme Comics App(s) and any Digital Content, you shall be subject to any posted guidelines or rules applicable to such service, features or offers that may be posted from time to time. All such guidelines or rules are hereby incorporated by reference into this Agreement.\
+\
+
+\f0\b DEFINED TERMS
+\f1\b0 \
+For the purposes of this Agreement:\
+"Digital Content" means digitized comic books, including single issues and trade publications.\
+"Johnny Xtreme Comics Apps" means, collectively, Johnny Xtreme's digital comics reader, storefront applications, websites and/or software (including any updates/upgrades to that software) through which you can: (1) browse, shop for, download and/or stream, read and/or otherwise use Digital Content or other items offered by us for use on one (1) or more select devices (e.g., smartphones, tablets, PC/Mac, et al.); and (2) manage your Digital Content and account settings.\
+"Subscription-based Content" means Digital Content made available to you on a subscription basis, such as the Johnny Xtreme Comics Unlimited service.\
+\
+
+\f0\b 1. Digital Comics and other Digital Content
+\f1\b0 \
+Digital Content. You understand and agree that the Johnny Xtreme Comics Apps and Digital Content you receive through the Johnny Xtreme Comics Apps is owned by Xtreme Teez and is protected by the copyright laws of the United States, as well as other intellectual property laws and treaties. Xtreme Teez does not transfer any title, right or interest to or in the Johnny Xtreme Comics Apps and/or Digital Content to you.\
+Use of Digital Content. Upon your download and/or streaming and/or use of Digital Content and payment of any applicable fees (including applicable taxes), Xtreme Teez grants you a non-exclusive and non-assignable license to access, view, download, use and display such Digital Content only on the number and type(s) (if so limited) of devices specified in the Johnny Xtreme Comics Apps or in the third party store in which the app was obtained (e.g., the iTunes app store), and solely for your personal, non-commercial use consistent with the terms of this Agreement. Digital Content is licensed to you by Xtreme Teez; not sold, transferred or assigned to you. Xtreme Teez may post additional terms for Digital Content in the Johnny Xtreme Comics Apps. Those terms will also apply, but in the event of a conflict between those terms and the terms of this Agreement, this Agreement will govern.\
+Limitations. Unless otherwise stated in writing by Xtreme Teez, you must not copy, redistribute, sell, rent, lease, convey, reconvey or sublicense the Digital Content. You must not attempt to circumvent, avoid, bypass, remove, deactivate, impair or otherwise defeat any encryption, rights signaling or copy protection technology in which the Digital Content is wrapped or otherwise associated with, and you must not edit, modify, translate or create derivative works or adaptations of the Digital Content. You must not duplicate or otherwise reproduce the Digital Content, or any portion thereof, onto any physical medium, memory or device (other than within your set of personal devices that are registered for access to your own personal account with Xtreme Teez's service), including but not limited to CDs, DVDs, computers or other hardware, or any other medium now known or hereafter devised.\
+\
+
+\f0\b Subscription-based Content.
+\f1\b0  You may cancel your subscription as permitted in our cancellation policy for such Subscription-based Content. We reserve the right to change subscription terms and fees from time to time, effective as of the beginning of the next subscription term upon notice to you. The Xtreme Teez Unlimited subscription service is governed by its terms of use located in the Account section of the Johnny Xtreme Unlimited app and on the Xtreme Teez website.\
+Offline Subscription-based Content. Xtreme Teez may, from time to time, permit you to download certain Subscription-based Content for offline use. Xtreme Teez may place limitations on such use, including, without limitation, the number of issues available offline at any given time and the length of offline availability. Xtreme Teez reserves the right, in its sole discretion, to change the terms of such offline use from time to time, without prior notice to you. Xtreme Teez further reserves the right, in its sole discretion, to terminate the ability to download and access offline content at any time, without prior notice to you.\
+\
+
+\f0\b 2. Johnny Xtreme Comics Apps
+\f1\b0 \
+Use of the Johnny Xtreme Comics Apps. You may use the Johnny Xtreme Comics Apps, including the software comprising them, solely on the number and type(s) (if so limited) of devices for which you downloaded such content. You may not separate any individual component of such software for use on another device or computer, may not transfer it for use on another device or computer or use it, or any portion of it, over a network, and may not sell, rent, lease, lend, distribute, or sublicense or otherwise assign any rights to such software in whole or in part.\
+App Updates. In order to keep your Johnny Xtreme Comics Apps up-to-date, Xtreme Teez may make available updates/upgrades to the app. If you do not download such updates/upgrades, you may not receive certain features and/or functionality and/or you may lose certain features and/or functionality of the app.\
+No Reverse Engineering, Decompilation, Disassembly, or Circumvention. You may not modify, reverse engineer, decompile, reproduce, copy, disassemble the Johnny Xtreme Comics Apps or otherwise reduce the computer file in which the Digital Content is stored to a human-readable form, whether in whole or in part, create any derivative works from or of the Johnny Xtreme Comics Apps, or bypass, modify, defeat, or tamper with or circumvent any of the functions or protections of the Johnny Xtreme Comics Apps; e.g., by modifying, defeating, augmenting or substituting any digital rights management functionality.\
+\
+
+\f0\b 3. General Compliance with Law and Reservation of Rights. 
+\f1\b0 You must use the Johnny Xtreme Comics Apps and the Digital Content in compliance with all applicable laws. All licenses are non-exclusive, and all rights not expressly granted in this Agreement are reserved to Xtreme Teez.\
+Export Regulations. You must comply with all applicable export and re-export restrictions and regulations, and you must not transfer, or encourage, assist, or authorize the transfer of, the Digital Content, or Johnny Xtreme Comics Apps to a prohibited country or otherwise in violation of any such restrictions or regulations.\
+Collection of Usage Information. The Johnny Xtreme Comics Apps will provide Xtreme Teez with information and data related to the Digital Content on your device and your use of it (such as registration information, information on what a user has purchased, information on the user's activity in the app, device details, et al.). Information we receive from or about you is subject to the Johnny Xtreme Comics Privacy Policy, and any personal information transferred by Xtreme Teez is subject to such privacy policy and to applicable law.\
+Patents/Copyrights. The Johnny Xtreme Comics Apps, and/or methods used in connection with the app, may be covered by copyright and one or more patents or pending patent applications and as trade secrets, and the Digital Content is protected by copyright, trademarks and other applicable law.\
+Suspension of Access. We may modify, suspend, or discontinue access to certain Digital Content in the event of a rights issue or other business or legal issue.\
+Termination. Your rights under this Agreement will automatically terminate if you fail to comply with any term of this Agreement. In case of such termination, you must cease all use of the Johnny Xtreme Comics Apps and Digital Content, and Xtreme Teez reserves the right to immediately revoke your access to the Johnny Xtreme Comics Apps or to Digital Content without refund of any fees. Xtreme Teez's failure to exercise or enforce any term of this Agreement will not constitute a waiver of such term or any of Xtreme Teez's rights or remedies.\
+\
+
+\f0\b Disclaimer of Warranties. 
+\f1\b0 USE OF THE JOHNNY XTREME COMICS APPS AND DIGITAL CONTENT, AND SOFTWARE IS AT YOUR SOLE RISK. NO ORAL OR WRITTEN INFORMATION OR ADVICE GIVEN BY XTREME TEEZ OR AN AUTHORIZED REPRESENTATIVE OF XTREME TEEZ CREATES A WARRANTY, AND THE JOHNNY XTREME COMICS APPS AND DIGITAL CONTENT ARE PROVIDED "AS IS" WITH ALL FAULTS AND WITHOUT WARRANTY OF ANY KIND, AND XTREME TEEZ AND ITS LICENSORS DISCLAIM ALL WARRANTIES, EXPRESS, IMPLIED, OR STATUTORY, INCLUDING BUT NOT LIMITED TO, IMPLIED WARRANTIES OR CONDITIONS OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, ACCURACY, QUIET ENJOYMENT, SATISFACTORY QUALITY, NON-INFRINGEMENT OF THIRD-PARTY RIGHTS, AND THEIR EQUIVALENTS UNDER THE LAWS OF ANY JURISDICTION . THE LAWS OF CERTAIN JURISDICTIONS DO NOT ALLOW THE DISCLAIMER OF IMPLIED WARRANTIES. IF THESE LAWS APPLY TO YOU, SOME OR ALL OF THE ABOVE DISCLAIMERS, EXCLUSIONS OR LIMITATIONS MAY NOT APPLY TO YOU, AND YOU MAY HAVE ADDITIONAL RIGHTS.\
+Limitation of Liability. TO THE EXTENT NOT PROHIBITED BY LAW, XTREME TEEZ AND ITS LICENSORS AND AFFILIATES WILL NOT BE LIABLE TO YOU FOR ANY INCIDENTAL OR CONSEQUENTIAL DAMAGES FOR BREACH OF ANY EXPRESS OR IMPLIED WARRANTY, BREACH OF CONTRACT, NEGLIGENCE, STRICT LIABILITY, OR ANY OTHER LEGAL THEORY RELATED TO THE JOHNNY XTREME COMICS APPS AND DIGITAL CONTENT, SUCH AS ANY DAMAGES ARISING OUT OF LOSS OF PROFITS, REVENUE, DATA, OR USE OF THE JOHNNY XTREME COMICS APPS AND DIGITAL CONTENT OR ANY ASSOCIATED PRODUCT, EVEN IF XTREME TEEZ HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES. IN ANY CASE, XTREME TEEZ'S AND ITS AFFILIATES' AGGREGATE LIABILITY UNDER THIS AGREEMENT WITH RESPECT TO ANY CLAIM RELATING TO PURCHASE OF DIGITAL CONTENT IS LIMITED TO THE AMOUNT YOU ACTUALLY PAID FOR THAT DIGITAL CONTENT. THE LAWS OF CERTAIN JURISDICTIONS DO NOT ALLOW THE EXCLUSION OR LIMITATION OF INCIDENTAL OR CONSEQUENTIAL DAMAGES. IF THESE LAWS APPLY TO YOU, SOME OR ALL OF THE ABOVE EXCLUSIONS OR LIMITATIONS MAY NOT APPLY TO YOU, AND YOU MAY HAVE ADDITIONAL RIGHTS.\
+\
+
+\f0\b Amendment.
+\f1\b0  We may amend any of the terms of this Agreement in our sole discretion by posting the revised terms on the Johnny Xtreme Comics Apps and/or the Xtreme Teez website. Your continued use of the Johnny Xtreme Comics Apps and Digital Content after the effective date of any such amendment constitutes your agreement to be bound by such amendment.\
+Contact Information. For help with any Johnny Xtreme Comics Apps and/or Digital Content, please contact Customer Service by email:info@xtremeteez.com\
+For communications concerning this Agreement, please contact Xtreme Teez by email: info@xtremeteez.com\
+\
+Questions or Comments.\
+If you have questions or concerns about ourlicense agreement and terms of use, you can contact us at:\
+info@xtremeteez.com}

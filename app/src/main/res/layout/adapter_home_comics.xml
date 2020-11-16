@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:layout_marginBottom="20dp">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:cardElevation="10dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="135dp">
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                app:layout_constraintBottom_toTopOf="parent"
+                app:layout_constraintDimensionRatio="W,379:487"
+                app:layout_constraintLeft_toRightOf="parent"
+                app:layout_constraintRight_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="parent">
+
+                <ImageView
+                    android:id="@+id/iv_comic_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/item" />
+
+            </RelativeLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/tvIssue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/thai_sans_neue_bold"
+        android:includeFontPadding="false"
+        android:layout_marginTop="5dp"
+        android:text="Item 1"
+        android:textColor="@color/colorWhite"
+        android:textSize="14sp" />
+
+
+    <TextView
+        android:id="@+id/tv_comic_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/thai_sans_neue_bold"
+        android:includeFontPadding="false"
+        android:text="Item 1"
+        android:textColor="@color/colorWhite"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/tvPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/thai_sans_neue_bold"
+        android:includeFontPadding="false"
+        android:text="Item 1"
+        android:textColor="@color/colorWhite"
+        android:textSize="14sp" />
+
+
+    <Button
+        android:id="@+id/previewButton"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:background="@drawable/laguange_button_shape"
+        android:backgroundTint="@color/colorWhite"
+        android:text="@string/read_more"
+        android:textAllCaps="false"
+        android:textSize="14sp"
+        android:textColor="@color/colorPrimary"/>
+</LinearLayout>
