@@ -4,7 +4,13 @@ import android.content.Intent;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
+import android.util.Log;
 
+import androidx.annotation.NonNull;
+
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.AuthResult;
 import com.xtreme.jx.BuildConfig;
 import com.xtreme.jx.R;
 import com.xtreme.jx.utils.AppPref;
@@ -30,6 +36,8 @@ public class SettingsActivity extends BaseActivity {
     void onClickSignOut() {
         mAuth.signOut();
         AppPref.setLoginStatus(this, false);
+
+
         HomeActivity homeActivity = HomeActivity.getInstance();
         homeActivity.setLogInUser();
         finish();

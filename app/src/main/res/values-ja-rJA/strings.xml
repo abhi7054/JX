@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Johnny Xtreme</string>
-    <string name="johny_xtreme">Johnny Xtreme</string>
+    <string name="johny_xtreme">ジョニー エクストリーム</string>
     <string name="english">English</string>
     <string name="japanese">日本語</string>
     <string name="new_comics">新刊コミック</string>
@@ -9,7 +9,7 @@
     <string name="sign_in">サインイン</string>
     <string name="sign_up">新規登録</string>
     <string name="send_mail">Send</string>
-    <string name="forgot_password_title">Forgot Password</string>
+    <string name="forgot_password_title">パスワードをお忘れですか？</string>
     <string name="email">Eメール</string>
     <string name="password">パスワード</string>
     <string name="forgot_password">パスワードをお忘れですか？</string>
@@ -23,7 +23,7 @@
     <string name="cancel">キャンセル</string>
     <string name="recent_searches">検索履歴</string>
     <string name="reviews">レビュー</string>
-    <string name="review_setting">Review</string>
+    <string name="review_setting">レビュー</string>
     <string name="all_comics">すべてのコミック</string>
     <string name="edit_profile">プロフィールを編集する</string>
     <string name="purchases">購入品</string>
@@ -45,12 +45,12 @@
     <string name="profile_update">Profile updated successfully</string>
     <string name="select_picture">Select picture</string>
     <string name="buy_comic">今すぐ購入して続きを楽しもう。</string>
-    <string name="back">Back</string>
-    <string name="buy">Buy Now</string>
+    <string name="back">ストアに戻る</string>
+    <string name="buy">今すぐ購入</string>
     <string name="post_review">Post Review</string>
-    <string name="ok">Ok</string>
-    <string name="login_now">Login now</string>
-    <string name="login_message">You can purchase comic after logged in</string>
+    <string name="ok">新規登録</string>
+    <string name="login_now">サインイン</string>
+    <string name="login_message">ログイン後このコミックをご購入いただけます。</string>
     <string name="verify_email_message">メールを確認し、メールアドレスを確認してからログインしてください</string>
 
     <string name="pon_chan">Pon-chan</string>
@@ -61,4 +61,6 @@
     <string name="email_already_in_use">このメールアドレスは既に別のアカウントで使用されています。</string>
     <string name="username_already_in_use">このユーザーネームは既に別のアカウントで使用されています。</string>
     <string name="sent_verification_email">ご購入の前にアカウント検証のためのE-Mailをお送りします。受信ボックスにメールが届かない場合は、迷惑メールのフォルダをご確認下さい</string>
+    <string name="loading_comic">コミックプレビューを読み込み中</string>
+    <string name="login_first">ログイン後このコミックをご購入いただけます。</string>
 </resources>

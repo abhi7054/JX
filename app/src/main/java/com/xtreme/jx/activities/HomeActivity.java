@@ -15,7 +15,9 @@ import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 
+import com.google.firebase.auth.AuthResult;
 import com.google.firebase.firestore.CollectionReference;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.xtreme.jx.BuildConfig;
@@ -44,6 +46,8 @@ public class HomeActivity extends BaseActivity {
 
     @BindView(R.id.rv_first)
     RecyclerView firstRecyclerView;
+
+
 
     @BindView(R.id.rv_second)
     RecyclerView secondRecyclerView;
@@ -95,7 +99,6 @@ public class HomeActivity extends BaseActivity {
         setContentView(R.layout.activity_home);
 
 
-
         ButterKnife.bind(this);
         initUI();
     }
@@ -120,6 +123,20 @@ public class HomeActivity extends BaseActivity {
             profile.setVisibility(View.VISIBLE);
             signOut.setVisibility(View.VISIBLE);
         } else {
+            mAuth.signInAnonymously()
+                    .addOnCompleteListener(HomeActivity.this, new OnCompleteListener<AuthResult>() {
+                        @Override
+                        public void onComplete(@NonNull Task<AuthResult> task) {
+                            if (task.isSuccessful()) {
+                                // Sign in success, update UI with the signed-in user's information
+                                Log.d("TAG", "signInAnonymously:success");
+                            } else {
+                                // If sign in fails, display a message to the user.
+                                Log.w("TAG", "signInAnonymously:failure", task.getException());
+                            }
+                        }
+                    });
+
             loginButtonContainer.setVisibility(View.VISIBLE);
             settingsButtonContainer.setVisibility(View.VISIBLE);
             drawerAppIcon.setVisibility(View.VISIBLE);

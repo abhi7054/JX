@@ -47,9 +47,9 @@
     <string name="back">Back</string>
     <string name="buy">Buy</string>
     <string name="post_review">Post Review</string>
-    <string name="ok">Ok</string>
-    <string name="login_now">Login now</string>
-    <string name="login_message">You can purchase comic after logged in</string>
+    <string name="ok">Sign Up</string>
+    <string name="login_now">Sign In</string>
+    <string name="login_message">You can purchase this comic after you are logged in.</string>
     <string name="verify_email_message">Check your mail and login after verify email address</string>
 
     <string name="pon_chan">Pon-chan</string>
@@ -67,5 +67,7 @@
     <string name="email_already_in_use">The email address is already in use by another account.</string>
     <string name="username_already_in_use">This username is already in use by another account.</string>
     <string name="sent_verification_email">You’ll be sent an email to verify your account before you can make any purchases. If it doesn’t reach your inbox, please check your junk/spam folder.</string>
+    <string name="loading_comic">Loading Comic Preview</string>
+    <string name="login_first">You can purchase this comic after you are logged in.</string>
 
 </resources>

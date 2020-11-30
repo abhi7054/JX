@@ -84,6 +84,14 @@ public class ComicPreviewActivity extends BaseActivity implements PurchasesUpdat
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_comic_preview);
         ButterKnife.bind(this);
+        if (AppPref.IsLanguageJapanese(this)) {
+            Util.setLanguage(this, "ja");
+
+        }
+        if (AppPref.IsLanguageEnglish(this)) {
+            Util.setLanguage(this, "en");
+
+        }
         initUI();
     }
 
@@ -177,22 +185,24 @@ public class ComicPreviewActivity extends BaseActivity implements PurchasesUpdat
         @Override
         protected void onPostExecute(InputStream inputStream) {
             ProgressDialog progressDialog = new ProgressDialog(ComicPreviewActivity.this, R.style.AppCompatAlertDialogStyle);
-            progressDialog.setTitle("Loading Comic preview");
+            progressDialog.setTitle(getString(R.string.loading_comic));
             progressDialog.setCancelable(false);
             if (ComicPreviewActivity.this.isDestroyed()) {
                 return;
             }
             progressDialog.show();
 
+
+
             if (isComicPurchased && AppPref.isLoggedIn(ComicPreviewActivity.this)) {
-                pdfView.fromStream(inputStream).pageFitPolicy(FitPolicy.WIDTH).onLoad(new OnLoadCompleteListener() {
+                pdfView.fromStream(inputStream).pageFitPolicy(FitPolicy.BOTH).onLoad(new OnLoadCompleteListener() {
                     @Override
                     public void loadComplete(int nbPages) {
                         progressDialog.dismiss();
                     }
                 }).swipeHorizontal(true).spacing(8).enableSwipe(true).pageFling(true).load();
             } else {
-                pdfView.fromStream(inputStream).pageFitPolicy(FitPolicy.WIDTH).onLoad(new OnLoadCompleteListener() {
+                pdfView.fromStream(inputStream).pageFitPolicy(FitPolicy.BOTH).onLoad(new OnLoadCompleteListener() {
                     @Override
                     public void loadComplete(int nbPages) {
                         progressDialog.dismiss();
@@ -207,7 +217,7 @@ public class ComicPreviewActivity extends BaseActivity implements PurchasesUpdat
                             alertDialog.show();
                         }
                     }
-                }).pages(0, 1, 2, 3, 4).swipeHorizontal(true).enableSwipe(true).pageFling(true).spacing(8).load();
+                }).pages(0, 1, 2, 3, 4).swipeHorizontal(true).enableSwipe(true).pageFling(true).spacing(8).fitEachPage(true).autoSpacing(false).load();
             }
         }
     }
@@ -236,9 +246,16 @@ public class ComicPreviewActivity extends BaseActivity implements PurchasesUpdat
         }
 
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
-        builder.setMessage("You can purchase comic after logged in");
-        builder.setNegativeButton("Ok", null);
-        builder.setPositiveButton("Login now", new DialogInterface.OnClickListener() {
+        builder.setMessage(R.string.login_first);
+        builder.setNegativeButton(R.string.sign_up, new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                dialog.cancel();
+                startActivity(new Intent(ComicPreviewActivity.this, SignUpActivity.class));
+
+            }
+        });
+        builder.setPositiveButton(R.string.sign_in, new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
                 dialog.cancel();
