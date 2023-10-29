@@ -1,0 +1,10 @@
+
+Johnny Extreme keystore passowrd
+
+JKS file:
+jx.jks
+
+jks password: 
+jxandroidkey
+
+Alias - johnnyextreme

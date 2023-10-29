@@ -291,7 +291,7 @@ public class ComicDetailActivity extends BaseActivity implements PurchasesUpdate
     }
 
     private void purchaseComic() {
-        if (AppPref.isLoggedIn(this)) {
+
             SkuDetailsParams params = SkuDetailsParams.newBuilder().setSkusList(Arrays.asList(comic.getProductId())).setType(BillingClient.SkuType.INAPP).build();
             billingClient.querySkuDetailsAsync(params, new SkuDetailsResponseListener() {
                 @Override
@@ -309,21 +309,7 @@ public class ComicDetailActivity extends BaseActivity implements PurchasesUpdate
                     }
                 }
             });
-            return;
-        }
 
-        AlertDialog.Builder builder = new AlertDialog.Builder(this);
-        builder.setMessage(getResources().getString(R.string.login_message));
-        builder.setNegativeButton(getResources().getString(R.string.ok), null);
-        builder.setPositiveButton(getResources().getString(R.string.login_now), new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialog, int which) {
-                dialog.cancel();
-                startActivity(new Intent(ComicDetailActivity.this, LogInActivity.class));
-            }
-        });
-        AlertDialog dialog = builder.create();
-        dialog.show();
     }
 
     @OnClick(R.id.iv_back)
@@ -335,16 +321,13 @@ public class ComicDetailActivity extends BaseActivity implements PurchasesUpdate
 
     @OnClick(R.id.rl_preview)
     void onClickPurchase() {
-        if (AppPref.isLoggedIn(this)) {
+
             if (!isComicPurchased) {
                 purchaseComic();
                 return;
             }
             showReviewDialog();
-        } else {
-            Toast.makeText(this, "Please login first", Toast.LENGTH_SHORT).show();
         }
-    }
 
     @OnClick(R.id.rl_read)
     void onClickRead() {

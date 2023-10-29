@@ -17,6 +17,7 @@ import com.xtreme.jx.R;
 import com.xtreme.jx.activities.ComicDetailActivity;
 import com.xtreme.jx.activities.ComicPreviewActivity;
 import com.xtreme.jx.activities.HomeActivity;
+import com.xtreme.jx.activities.ProfileActivity;
 import com.xtreme.jx.model.Comic;
 
 import java.util.ArrayList;
@@ -44,7 +45,7 @@ public class HomeComicsAdapter extends RecyclerView.Adapter<HomeComicsAdapter.Ho
         } else if (context instanceof HomeActivity) {
             view = LayoutInflater.from(context).inflate(R.layout.adapter_home_comics, parent, false);
         } else {
-            view = LayoutInflater.from(context).inflate(R.layout.adapter_comics_detail, parent, false);
+            view = LayoutInflater.from(context).inflate(R.layout.adapter_home_comics, parent, false);
         }
         return new HomeComicsViewHolder(view);
     }
@@ -62,14 +63,24 @@ public class HomeComicsAdapter extends RecyclerView.Adapter<HomeComicsAdapter.Ho
         } else if (context instanceof HomeActivity) {
             holder.comicTitleTextView.setTextColor(context.getResources().getColor(R.color.colorWhite));
         } else {
-            holder.comicTitleTextView.setTextColor(context.getResources().getColor(R.color.colorBlack));
+            holder.comicTitleTextView.setTextColor(context.getResources().getColor(R.color.colorWhite));
+            holder.comicTitleTextView.setVisibility(View.GONE);
+            holder.issueTextView.setVisibility(View.GONE);
+            holder.priceTV.setVisibility(View.GONE);
+            holder.previewButton.setVisibility(View.GONE);
         }
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                context.startActivity(new Intent(context, ComicDetailActivity.class).putExtra("comic_details", comicArrayList.get(position)));
-                if (context instanceof ComicDetailActivity) {
-                    ((ComicDetailActivity) context).finish();
+
+                if(context instanceof ProfileActivity){
+                    context.startActivity(new Intent(context, ComicPreviewActivity.class).putExtra("comic_details", comicArrayList.get(position)));
+                }else {
+
+                    context.startActivity(new Intent(context, ComicDetailActivity.class).putExtra("comic_details", comicArrayList.get(position)));
+                    if (context instanceof ComicDetailActivity) {
+                        ((ComicDetailActivity) context).finish();
+                    }
                 }
             }
         });

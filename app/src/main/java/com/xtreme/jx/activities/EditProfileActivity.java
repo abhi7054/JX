@@ -160,6 +160,7 @@ public class EditProfileActivity extends BaseActivity {
                 user.setImage(imageUri);
                 AppPref.setUserData(EditProfileActivity.this, user);
                 setProgressBar(false);
+                onClickBack();
                 Toast.makeText(EditProfileActivity.this, getString(R.string.profile_update), Toast.LENGTH_SHORT).show();
             }
         }).addOnFailureListener(new OnFailureListener() {

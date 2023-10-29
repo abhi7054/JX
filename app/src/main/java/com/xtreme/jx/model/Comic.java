@@ -11,6 +11,16 @@ public class Comic implements Serializable {
     private String image;
     private String PDFurl;
     private String productId;
+    private String issue;
+
+    public String getIssue() {
+        return issue;
+    }
+
+    public void setIssue(String issue) {
+        this.issue = issue;
+    }
+
     private int ratings;
     private int reviews;
     private Date timestamp;

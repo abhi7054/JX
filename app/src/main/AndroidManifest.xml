@@ -33,7 +33,8 @@
         <activity android:name=".activities.LogInActivity" />
         <activity android:name=".activities.LanguageSelectionActivity" />
         <activity android:name=".activities.HomeActivity" />
-        <activity android:name=".activities.SplashActivity">
+        <activity android:name=".activities.SplashActivity"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

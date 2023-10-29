@@ -99,8 +99,12 @@ public class ComicPreviewActivity extends BaseActivity implements PurchasesUpdat
     public void onPurchasesUpdated(@NonNull BillingResult billingResult, @Nullable List<Purchase> list) {
         if (billingResult.getResponseCode() == BillingClient.BillingResponseCode.OK) {
             isComicPurchased = true;
-            mDatabase.collection(Constant.USER_COLLECTION).document(user.getDocId()).collection(Constant.PURCHASED_COMICS).add(comic);
-            new RetrivePDFStream().execute(comic.getPDFurl());
+
+            ArrayList<Comic> comics = AppPref.getPurchasedComics(this);
+
+            comics.add(comic);
+
+            AppPref.setPurchasedComics(this, comics);
         }
     }
 
@@ -114,6 +118,7 @@ public class ComicPreviewActivity extends BaseActivity implements PurchasesUpdat
                 for (Comic c : AppPref.getPurchasedComics(this)) {
                     if (c.getProductId().equals(comic.getProductId())) {
                         isComicPurchased = true;
+                        Log.e("Purchased", "true");
                     }
                 }
             }
@@ -121,7 +126,8 @@ public class ComicPreviewActivity extends BaseActivity implements PurchasesUpdat
         } else {
             Toast.makeText(this, "Please check internet connection", Toast.LENGTH_SHORT).show();
         }
-        initPurchaseDialog();
+        if(!isComicPurchased && comic.getPrice() != 0)
+            initPurchaseDialog();
 
         billingClient = BillingClient.newBuilder(this).enablePendingPurchases().setListener(this).build();
         billingClient.startConnection(new BillingClientStateListener() {
@@ -194,7 +200,7 @@ public class ComicPreviewActivity extends BaseActivity implements PurchasesUpdat
 
 
 
-            if (isComicPurchased && AppPref.isLoggedIn(ComicPreviewActivity.this)) {
+            if (isComicPurchased) {
                 pdfView.fromStream(inputStream).pageFitPolicy(FitPolicy.BOTH).onLoad(new OnLoadCompleteListener() {
                     @Override
                     public void loadComplete(int nbPages) {
@@ -211,20 +217,22 @@ public class ComicPreviewActivity extends BaseActivity implements PurchasesUpdat
                     @Override
                     public void onPageScrolled(int page, float positionOffset) {
                         if (page == 4) {
-                            if (alertDialog.isShowing()) {
-                                return;
+                            if(!isComicPurchased && comic.getPrice() != 0)
+                                alertDialog.show();
+                            else{
+                                pdfView.setSwipeEnabled(true);
                             }
-                            alertDialog.show();
                         }
+
                     }
-                }).pages(0, 1, 2, 3, 4).swipeHorizontal(true).enableSwipe(true).pageFling(true).spacing(8).fitEachPage(true).autoSpacing(false).load();
+                }).swipeHorizontal(true).enableSwipe(true).pageFling(true).spacing(8).fitEachPage(true).autoSpacing(false).load();
             }
         }
     }
 
     private void purchaseComic() {
-        if (AppPref.isLoggedIn(this)) {
-            pdfView.jumpTo(0);
+
+
             SkuDetailsParams params = SkuDetailsParams.newBuilder().setSkusList(Arrays.asList(comic.getProductId())).setType(BillingClient.SkuType.INAPP).build();
             billingClient.querySkuDetailsAsync(params, new SkuDetailsResponseListener() {
                 @Override
@@ -242,28 +250,7 @@ public class ComicPreviewActivity extends BaseActivity implements PurchasesUpdat
                     }
                 }
             });
-            return;
-        }
 
-        AlertDialog.Builder builder = new AlertDialog.Builder(this);
-        builder.setMessage(R.string.login_first);
-        builder.setNegativeButton(R.string.sign_up, new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialog, int which) {
-                dialog.cancel();
-                startActivity(new Intent(ComicPreviewActivity.this, SignUpActivity.class));
-
-            }
-        });
-        builder.setPositiveButton(R.string.sign_in, new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialog, int which) {
-                dialog.cancel();
-                startActivity(new Intent(ComicPreviewActivity.this, LogInActivity.class));
-            }
-        });
-        AlertDialog dialog = builder.create();
-        dialog.show();
     }
 
     @OnClick(R.id.iv_back)

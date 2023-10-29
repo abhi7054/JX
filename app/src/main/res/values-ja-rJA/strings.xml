@@ -16,7 +16,7 @@
     <string name="dont_have_an_account">アカウントをお持ちでないですか？</string>
     <string name="user">ユーザー</string>
     <string name="existing_user">既にご登録済みですか?</string>
-    <string name="my_profile">プロフィール</string>
+    <string name="my_profile">購入履歴</string>
     <string name="restore_purchases">購入の復元</string>
     <string name="settings">設定</string>
     <string name="creator_profile">クリエータープロフィール</string>

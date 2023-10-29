@@ -1,6 +1,7 @@
 package com.xtreme.jx.activities;
 
 import androidx.annotation.NonNull;
+import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -9,8 +10,12 @@ import android.os.Bundle;
 import android.util.Log;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
+import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.firebase.firestore.DocumentReference;
+import com.google.firebase.firestore.DocumentSnapshot;
 import com.xtreme.jx.R;
 import com.xtreme.jx.adapters.HomeComicsAdapter;
 import com.xtreme.jx.adapters.MyReviewsAdapter;
@@ -71,49 +76,32 @@ public class ProfileActivity extends BaseActivity {
     @Override
     protected void onResume() {
         super.onResume();
-        user = AppPref.getUser(this);
-        if (user == null) {
-            return;
-        }
-        userName.setText(user.getUsername());
-        Glide.with(this).load(user.getImage()).placeholder(R.drawable.user_placeholder).into(userImageView);
-        getMyReviewsList();
+      //  user = AppPref.getUser(this);
+
+//        userName.setText(user.getUsername());
+     //   Glide.with(this).load(user.getImage()).placeholder(R.drawable.user_placeholder).into(userImageView);
         getMyPurchases();
     }
 
     void setPurchasedComicsRecyclerView(ArrayList<Comic> comicArrayList) {
         purchasedcomicsAdapter = new HomeComicsAdapter(this, comicArrayList);
-        purchasedComicsRecyclerView.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false));
+        purchasedComicsRecyclerView.setLayoutManager(new GridLayoutManager(this, 2));
         purchasedComicsRecyclerView.setAdapter(purchasedcomicsAdapter);
     }
 
     void setReviewRecyclerView(ArrayList<Comic> comicArrayList) {
         reviewsAdapter = new MyReviewsAdapter(this, comicArrayList);
-        reviewsRecyclerView.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false));
+        reviewsRecyclerView.setLayoutManager(new GridLayoutManager(this, 2));
         reviewsRecyclerView.setAdapter(reviewsAdapter);
     }
 
     void getMyPurchases() {
-        mDatabase.collection(Constant.USER_COLLECTION).document(user.getDocId()).collection(Constant.PURCHASED_COMICS).get().addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
-            @Override
-            public void onComplete(@NonNull Task<QuerySnapshot> task) {
-                if (task.isSuccessful()) {
-                    ArrayList<Comic> comicList = new ArrayList<>();
-                    for (QueryDocumentSnapshot document : task.getResult()) {
-                        Comic comic = document.toObject(Comic.class);
-                        comicList.add(comic);
-                    }
-                    purchaseCountTextView.setText(String.valueOf(comicList.size()));
-                    myPurchaseCount.setText(getString(R.string.purchases) + " (" + comicList.size()+ ")");
-                    setPurchasedComicsRecyclerView(comicList);
-                } else {
-                    Log.d("TAG - - - ", "Error getting documents: ", task.getException());
-                }
-            }
-        });
+
+        setPurchasedComicsRecyclerView(AppPref.getPurchasedComics(this));
+
     }
 
-    void getMyReviewsList() {
+  /*  void getMyReviewsList() {
         mDatabase.collection(Constant.USER_COLLECTION).document(user.getDocId()).collection(Constant.REVIEWED_COMICS).get().addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
             @Override
             public void onComplete(@NonNull Task<QuerySnapshot> task) {
@@ -124,7 +112,7 @@ public class ProfileActivity extends BaseActivity {
                         comicList.add(comicReview);
                     }
                     reviewCount.setText(String.valueOf(comicList.size()));
-                    myReviewCount.setText(getString(R.string.reviews) + " (" + comicList.size()+ ")");
+                    myReviewCount.setText(getString(R.string.reviews) + " (" + comicList.size() + ")");
                     setReviewRecyclerView(comicList);
                 } else {
                     Log.d("TAG - - - ", "Error getting documents: ", task.getException());
@@ -141,5 +129,5 @@ public class ProfileActivity extends BaseActivity {
     @OnClick(R.id.rl_edit_profile)
     void onClickEditProfile() {
         startActivity(new Intent(this, EditProfileActivity.class));
-    }
+    }*/
 }

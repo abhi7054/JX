@@ -4,18 +4,19 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorWhite"
+    android:background="@color/colorPrimary"
     android:orientation="vertical"
     tools:context=".activities.ProfileActivity">
 
-    <ImageView
-        android:id="@+id/iv_back"
-        android:layout_width="50dp"
+    <TextView
+        android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:layout_marginStart="31dp"
-        android:layout_marginTop="11dp"
+        android:layout_gravity="center_horizontal"
+        android:textAlignment="center"
+        android:textColor="@color/colorWhite"
         android:padding="8dp"
-        android:src="@drawable/ic_action_back" />
+        android:text="@string/my_profile"
+        android:textSize="24sp"/>
 
     <ScrollView
         android:layout_width="match_parent"
@@ -32,7 +33,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="30dp"
                 android:layout_marginRight="50dp"
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+                android:visibility="gone">
 
                 <LinearLayout
                     android:layout_width="0dp"
@@ -83,6 +85,7 @@
                         </LinearLayout>
 
                         <LinearLayout
+                            android:visibility="gone"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="16dp"
@@ -138,7 +141,7 @@
                         android:layout_gravity="center"
                         android:layout_marginTop="8dp"
                         android:background="@drawable/laguange_button_shape"
-                        android:backgroundTint="@color/colorPrimary"
+                        android:backgroundTint="@color/colorWhite"
                         android:gravity="center"
                         android:orientation="horizontal"
                         android:paddingStart="12dp"
@@ -152,7 +155,7 @@
                             android:layout_gravity="center"
                             android:fontFamily="@font/thai_sans_neue_regular"
                             android:text="@string/edit_profile"
-                            android:textColor="@color/colorWhite"
+                            android:textColor="@color/colorPrimary"
                             android:textSize="16sp" />
 
                     </LinearLayout>
@@ -170,12 +173,13 @@
                 android:fontFamily="@font/thai_sans_neue_bold"
                 android:maxLines="1"
                 android:textColor="@color/colorBlack"
-                android:textSize="22sp" />
+                android:textSize="22sp"
+                android:visibility="gone"/>
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/rv_purchase_comics"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:layout_marginTop="16dp" />
 
             <TextView
@@ -183,6 +187,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="31dp"
+                android:visibility="gone"
                 android:layout_marginTop="30dp"
                 android:fontFamily="@font/thai_sans_neue_bold"
                 android:maxLines="1"
@@ -191,6 +196,7 @@
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/rv_reviews"
+                android:visibility="gone"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp" />

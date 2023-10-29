@@ -1,6 +1,7 @@
 package com.xtreme.jx.activities;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.recyclerview.widget.GridLayoutManager;
@@ -16,11 +17,23 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
+import com.android.billingclient.BuildConfig;
+import com.android.billingclient.api.BillingClient;
+import com.android.billingclient.api.BillingClientStateListener;
+import com.android.billingclient.api.BillingFlowParams;
+import com.android.billingclient.api.BillingResult;
+import com.android.billingclient.api.Purchase;
+import com.android.billingclient.api.PurchasesResponseListener;
+import com.android.billingclient.api.PurchasesUpdatedListener;
+import com.android.billingclient.api.QueryPurchasesParams;
+import com.android.billingclient.api.SkuDetails;
+import com.android.billingclient.api.SkuDetailsParams;
+import com.android.billingclient.api.SkuDetailsResponseListener;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.firestore.CollectionReference;
 import com.google.firebase.firestore.DocumentSnapshot;
-import com.xtreme.jx.BuildConfig;
 import com.xtreme.jx.R;
 import com.xtreme.jx.adapters.HomeComicsAdapter;
 import com.xtreme.jx.model.Comic;
@@ -34,7 +47,10 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.firestore.QueryDocumentSnapshot;
 import com.google.firebase.firestore.QuerySnapshot;
 
+import org.json.JSONObject;
+
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
@@ -42,7 +58,7 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 
-public class HomeActivity extends BaseActivity {
+public class HomeActivity extends BaseActivity{
 
     @BindView(R.id.rv_first)
     RecyclerView firstRecyclerView;
@@ -88,7 +104,14 @@ public class HomeActivity extends BaseActivity {
     HomeComicsAdapter firstComicsListAdapter;
     HomeComicsAdapter secondComicsListAdapter;
 
+    private BillingClient billingClient;
+    private static final String TAG = "ComicPreviewActivity";
+
     static HomeActivity instance;
+
+    ArrayList<Comic> comics = new ArrayList<>();
+    ArrayList<Comic> totalComics = new ArrayList<>();
+    ArrayList<Comic> test = new ArrayList<>();
 
     User user;
 
@@ -99,8 +122,12 @@ public class HomeActivity extends BaseActivity {
         setContentView(R.layout.activity_home);
 
 
+
         ButterKnife.bind(this);
         initUI();
+
+
+
     }
 
     public static HomeActivity getInstance() {
@@ -111,8 +138,78 @@ public class HomeActivity extends BaseActivity {
         instance = this;
         setLogInUser();
         getComicsList();
-        getJapaneseComicsList();
         getUserDetail();
+
+
+    }
+
+    void getPurchases(){
+
+        //totalComics.addAll(comics);
+
+        test.addAll(comics);
+        test.addAll(totalComics);
+
+        billingClient = BillingClient.newBuilder(this)
+                .enablePendingPurchases()
+                .setListener(new PurchasesUpdatedListener() {
+                    @Override
+                    public void onPurchasesUpdated(@NonNull BillingResult billingResult, @Nullable List<Purchase> list) {
+                        billingClient.queryPurchasesAsync(
+                                QueryPurchasesParams.newBuilder().setProductType(BillingClient.ProductType.INAPP).build(), new PurchasesResponseListener() {
+                                    @Override
+                                    public void onQueryPurchasesResponse(@NonNull BillingResult billingResult, @NonNull List<Purchase> list) {
+                                        Toast.makeText(HomeActivity.this, billingResult.toString(), Toast.LENGTH_SHORT).show();
+                                    }
+                                }
+                        );
+                    }
+                })
+                .build();
+
+
+        billingClient.startConnection(new BillingClientStateListener() {
+            @Override
+            public void onBillingSetupFinished(BillingResult billingResult) {
+                int billingResponseCode = billingResult.getResponseCode();
+
+                if (billingResponseCode == BillingClient.BillingResponseCode.OK)
+                {
+                    billingClient.queryPurchasesAsync(QueryPurchasesParams.newBuilder().setProductType(BillingClient.ProductType.INAPP).build(), new PurchasesResponseListener() {
+                        @Override
+                        public void onQueryPurchasesResponse(@NonNull BillingResult billingResult, @NonNull List<Purchase> list) {
+                            Log.e("Purchase", list.toString());
+
+                            ArrayList<Comic> purchases = new ArrayList<>();
+
+                            Log.e("Count", String.valueOf(test.size()));
+
+                            for(int i = 0; i<test.size(); i++){
+
+                                for(int j = 0; j < list.size(); j++){
+
+                                    String product = list.get(j).getOriginalJson();
+
+                                    Log.e("Product", product);
+                                    if(product.contains(test.get(i).getProductId())){
+                                        purchases.add(test.get(i));
+                                        Log.e("Check", "Done");
+                                    }
+                                }
+                            }
+
+                            AppPref.setPurchasedComics(HomeActivity.this, purchases);
+                        }
+                    });
+
+
+                }
+            }
+            @Override
+            public void onBillingServiceDisconnected() {
+
+            }
+        });
     }
 
     public void setLogInUser() {
@@ -140,7 +237,7 @@ public class HomeActivity extends BaseActivity {
             loginButtonContainer.setVisibility(View.VISIBLE);
             settingsButtonContainer.setVisibility(View.VISIBLE);
             drawerAppIcon.setVisibility(View.VISIBLE);
-            profile.setVisibility(View.GONE);
+            //profile.setVisibility(View.GONE);
             signOut.setVisibility(View.GONE);
         }
     }
@@ -160,15 +257,22 @@ public class HomeActivity extends BaseActivity {
                         comicArrayList.add(comic);
                     }
 
+                    //comics = comicArrayList;
+                    totalComics = comicArrayList;
+                    getJapaneseComicsList();
+
+
                     if (comicArrayList.size() > 0) {
                         comicsHeader.setVisibility(View.VISIBLE);
 
-                        Collections.reverse(comicArrayList);
+                        Log.e("Test", String.valueOf(comicArrayList.size()));
+                        
                         if (AppPref.IsLanguageEnglish(HomeActivity.this)) {
                             firstComicsListAdapter = new HomeComicsAdapter(HomeActivity.this, comicArrayList);
                             firstRecyclerView.setLayoutManager(new LinearLayoutManager(HomeActivity.this, RecyclerView.VERTICAL, false));
                             firstRecyclerView.setAdapter(firstComicsListAdapter);
                         } else {
+                            Log.e("TestEnglish", String.valueOf(comicArrayList.size()));
                             secondComicsListAdapter = new HomeComicsAdapter(HomeActivity.this, comicArrayList);
                             secondRecyclerView.setLayoutManager(new LinearLayoutManager(HomeActivity.this, RecyclerView.VERTICAL, false));
                             secondRecyclerView.setAdapter(secondComicsListAdapter);
@@ -193,19 +297,30 @@ public class HomeActivity extends BaseActivity {
                         Log.d("TAG - - - ", document.getId() + " => " + document.getData());
                         Comic comic = document.toObject(Comic.class);
                         comic.setComicId(document.getId());
+
+
                         comicArrayList.add(comic);
+
+
                     }
+                    comics = comicArrayList;
+
+
+
+                    getPurchases();
 
                     if (comicArrayList.size() > 0) {
                         comicsHeader.setVisibility(View.VISIBLE);
 
-                        Collections.reverse(comicArrayList);
+
 
                         if (AppPref.IsLanguageEnglish(HomeActivity.this)) {
+                            Log.e("TestJapan", String.valueOf(comicArrayList.size()));
                             secondComicsListAdapter = new HomeComicsAdapter(HomeActivity.this, comicArrayList);
                             secondRecyclerView.setLayoutManager(new LinearLayoutManager(HomeActivity.this, RecyclerView.VERTICAL, false));
                             secondRecyclerView.setAdapter(secondComicsListAdapter);
                         } else {
+                            Log.e("TestJapan2", String.valueOf(comicArrayList.size()));
                             firstComicsListAdapter = new HomeComicsAdapter(HomeActivity.this, comicArrayList);
                             firstRecyclerView.setLayoutManager(new LinearLayoutManager(HomeActivity.this, RecyclerView.VERTICAL, false));
                             firstRecyclerView.setAdapter(firstComicsListAdapter);
@@ -260,7 +375,7 @@ public class HomeActivity extends BaseActivity {
                             Comic c = document.toObject(Comic.class);
                             purchasedComic.add(c);
                         }
-                        AppPref.setPurchasedComics(HomeActivity.this, purchasedComic);
+                        //AppPref.setPurchasedComics(HomeActivity.this, purchasedComic);
                     } else {
                         Log.d("TAG - - - ", "Error getting documents: ", task.getException());
                     }
@@ -268,6 +383,7 @@ public class HomeActivity extends BaseActivity {
             });
         }
     }
+
 
     void getMyReviews() {
         if (AppPref.isLoggedIn(this)) {
@@ -374,5 +490,6 @@ public class HomeActivity extends BaseActivity {
         homeActivity.setLogInUser();
         signOut.setVisibility(View.GONE);
     }
+
 
 }
