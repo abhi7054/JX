@@ -10,8 +10,8 @@ android {
         applicationId "com.xtreme.jx"
         minSdk 24
         targetSdk 34
-        versionCode 26
-        versionName "7.0"
+        versionCode 27
+        versionName "7.1"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         multiDexEnabled true
     }
